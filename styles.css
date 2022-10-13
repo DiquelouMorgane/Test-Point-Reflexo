@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'abril';
+    src: url(fonts/AbrilFatface-Regular.ttf);
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+/*----------------------------PROPPER CSS----------------------------*/
+/*----------------------------Propriétés générales----------------------------*/
+body {
+    width: 100%;
+    justify-content: center;
+    font-family: 'montserrat';
+    background: #d9e7df;
+    color: #202a53;
+    margin: 0%;
+}
+h1 {
+  font-weight: 100;
+  padding-bottom: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+/*---------------------------- Partie en-tête ----------------------------*/
+#en-tete {
+  padding: 1rem 2rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+}
+li {
+  width: 100%;
+  padding: 0px 30px;
+  list-style-type: none;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+a {
+  text-decoration: none;
+  color: #202a53;
+}
+a:hover {
+  color: #5D71C0;
+}
+#en-tete img {
+  width: 20%;
+}
+/*---------------------------- Partie Présentation ----------------------------*/
+#presentation {
+  background-image: url("images/presentation-picture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15%;
+  color: #faf6f4;
+  text-align: center;
+  font-family: 'abril';
+  font-size: 3rem;
+  font-weight: 100;
+}
+button {
+  background-color: #202a53;
+  padding: 1rem;
+  margin: 2rem;
+  font-size: 2rem;
+  font-family: 'Roboto';
+  border-radius: 1rem;
+}
+button a {
+  color: #d9e7df;
+}
+/*---------------------------- Partie Réflexologie ----------------------------*/
+#reflexologie {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 500px;
+}
+#reflexologieContenu {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+#reflexologieContenu p {
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+#reflexologie img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+#reflexologieImage {
+    width: 50%;
+}
+/*---------------------------- Partie Galerie ----------------------------*/
+#galerie {
+  background-color: #faf6f4;
+  padding: 2rem 0rem;
+}
+#galerie h2 {
+  padding-top: 2rem;
+  text-align: center;
+}
+.galerieImage {
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.galerieImage img {
+height: 250px;
+width: 350px;
+transform: scale(1.0);
+transition: transform 0.4s ease;
+}
+.img-box {
+box-sizing: content-box;
+margin: 10px;
+height: 250px;
+width: 350px;
+overflow: hidden;
+display: inline-block;
+color: white;
+position: relative;
+background-color: white;
+}
+.caption {
+position: absolute;
+bottom: 5px;
+left: 20px;
+opacity: 0.0;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.transparent-box {
+height: 250px;
+width: 350px;
+background-color:rgba(0, 0, 0, 0);
+position: absolute;
+top: 0;
+left: 0;
+transition: background-color 0.3s ease;
+}
+.img-box:hover img { 
+transform: scale(1.1);
+}
+.img-box:hover .transparent-box {
+background-color:rgba(0, 0, 0, 0.5);
+}
+.img-box:hover .caption {
+transform: translateY(-20px);
+opacity: 1.0;
+}
+.img-box:hover {
+cursor: pointer;
+}
+.caption > p:nth-child(2) {
+font-size: 0.8em;
+}
+.opacity-low {
+opacity: 0.5;
+}
+/*---------------------------- Page de prestations ----------------------------*/
+/*---------------------------- Prestations ----------------------------*/
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+#prestations {
+    text-align: center;
+    background-color: #faf6f4;
+    padding: 2rem 0rem;
+}
+#prestations img {
+  width: 100%;
+}
+#contenuPrestation {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+}
+#contenuPrestation span {
+    font-size: 2rem;
+}
+/*---------------------------- Cures ----------------------------*/
+#cures {
+  text-align: center;
+  background-color: #d9e7df;
+  padding: 2rem 0rem;
+}
+#saisons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.saison {
+  width: 23%;
+}
+#carte {
+  border: #202a53 1px solid;
+  border-radius: 2rem;
+  margin: 3rem;
+}
+.card img {
+  width: 100%;
+  height: 25%;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.card_wrapper {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 30px 28px;
+  grid-gap: 30px;
+  align-items: stretch;
+}
+
+.card {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.374, 0.019, 0.035, 1.861);
+  background-color: skyblue;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 550px;
+}
+.card p {
+  text-overflow: ellipsis;
+}
+#hiver {
+  background-color: #c0d8e0;
+  border-radius: 2rem;
+}
+#printemps {
+  background-color: #a7ce9f;
+  border-radius: 2rem;
+}
+#ete {
+  background-color: #ffee93;
+  border-radius: 2rem;
+}
+#automne {
+  background-color: #f6a477;
+  border-radius: 2rem;
+}
+/*----------------------------Page ateliers----------------------------*/
+#ateliers {
+  background-image: url("images/image-ateliers-pc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 30%;
+  color: #faf6f4;
+  text-align: center;
+  font-family: 'abril';
+  font-size: 2.5rem;
+  font-weight: 50;
+}
+/*----------------------------Page blog ----------------------------*/
+#blog {
+    background-image: url("images/image-blog-pc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+    padding-bottom: 45%;
+    color: #202a53;
+    text-align: center;
+    font-family: 'abril';
+    font-size: 2.5rem;
+    font-weight: 50;
+}
+/*---------------------------- Bas de page ----------------------------*/
+/*---------------------------- Partie Contact ----------------------------*/
+#contact {
+    background-color: #faf6f4;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.5rem;
+}
+#contact ul {
+    display: flex;
+    flex-direction: column;
+}
+#horaires {
+  text-align: center;
+}
+#contact ul {
+  padding: 0rem;
+}
+#contacts li {
+    display: flex;
+    align-items: center;
+}
+#contacts i {
+    padding-right: 2rem;
+}
+#contacts i::before {
+    color: #202a53;
+    padding: 15px;
+    border: #202a53 solid;
+    border-radius: 50%;
+}
+footer li {
+    padding-bottom: 3rem;
+}
+footer p {
+    font-weight: bold;
+    margin: 0;
+}
+/*---------------------------- Partie Réseaux sociaux ----------------------------*/
+#reseaux {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+#reseaux i::before {
+    color: #d9e7df;
+    padding: 15px;
+    border: #202a53 solid;
+    background-color: #202a53;
+    border-radius: 50%;
+}
+/*---------------------------- Adaptations sur autres écrans ----------------------------*/
+/*----------------------------Moyens écrans----------------------------*/
+@media screen and (max-width: 780px) {
+li {
+  font-size: 1rem;
+}
+#presentation {
+  font-size: 2.5rem;
+}
+button {
+  margin: 0rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+#contenuPrestation span {
+  font-size: 1.5rem;
+}
+#ateliers {
+  font-size: 1.4rem;
+}
+#blog {
+  font-size: 1.4rem;
+}
+.card {
+  height: 500px;
+}
+.card img {
+  height: 40%;
+}
+}
+/*----------------------------Petits écrans----------------------------*/
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 1rem;
+  }
+  #en-tete {
+    padding: 0rem;
+  }
+  #en-tete img {
+    padding-right: 0rem;
+  }
+  li {
+    font-size: 0.5rem;
+    padding: 0px 10px;
+  }
+  #presentation {
+    font-size: 1rem;
+  }
+  #reflexologie {
+    height: 250px;
+  }
+  #reflexologieContenu p {
+    font-size: 0.5rem;
+    padding: 1rem;
+  }
+  button {
+    padding: 1rem;
+    font-size: 0.5rem;
+  }
+  #reflexologie img {
+    height: 250px;
+  }
+  #contenuPrestation {
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  #contenuPrestation span {
+    font-size: 1rem;
+  }
+  .card {
+    height: 600px;
+  }
+  .card img {
+    height: 30%;
+  }
+  #contacts i::before {
+    border: #202a53 1px solid;
+  }
+  #ateliers {
+    font-size: 0.5rem;
+  }
+  #blog {
+    font-size: 0.5rem;
+  }
+  }
